@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ダウンロード - ATOS放送シュミレーター</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #0f0f14;
+    color: #eaeaea;
+}
+
+header {
+    padding: 40px;
+    text-align: center;
+    background: #1a1d25;
+}
+
+section {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+}
+
+.card {
+    background: #1b1f2a;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 18px;
+    background: #4aa3ff;
+    color: #000;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background: #11141c;
+    color: #eaeaea;
+    border: 1px solid #333;
+    border-radius: 8px;
+}
+
+.notice {
+    background: #2a1f1f;
+    border-left: 4px solid #ff5555;
+    padding: 12px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>ダウンロード</h1>
+    <p>ATOS放送シュミレーター 配布ページ</p>
+</header>
+
+<section>
+
+<div class="card">
+    <h2>📦 バージョン選択</h2>
+
+    <label>バージョン</label>
+    <select id="versionSelect" onchange="updateDownloadLink()">
+        <option value="1.0.0">Release 1.0.0（最新）</option>
+    </select>
+
+    <a id="downloadBtn" class="button" href="app/ATOS放送シュミレーター Setup 1.0.0.exe" download>
+        ⬇ ダウンロード
+    </a>
+</div>
+
+<div class="card">
+    <h2>⚠ 注意事項</h2>
+
+    <div class="notice">
+        ・appフォルダの指定は不要です（そのまま実行可能）<br>
+        ・audio_partsフォルダは初回起動時に自動生成されます<br>
+        ・音声パーツはユーザー自身で用意してください（今後配布予定）<br>
+    </div>
+</div>
+
+<div class="card">
+    <h2>💻 動作環境</h2>
+    <ul>
+        <li>Windows 10 / 11</li>
+        <li>Electronベースアプリ</li>
+        <li>ローカル実行型（ネット不要）</li>
+    </ul>
+</div>
+
+</section>
+
+<script>
+function updateDownloadLink() {
+    const v = document.getElementById("versionSelect").value;
+    const btn = document.getElementById("downloadBtn");
+
+    btn.href = `app/ATOS放送シュミレーター Setup {v}.exe`;
+}
+</script>
+
+</body>
+</html>
