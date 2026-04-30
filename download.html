@@ -31,25 +31,41 @@ section {
     margin-bottom: 20px;
 }
 
+.versionBox {
+    background: #141824;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.versionTitle {
+    font-weight: bold;
+}
+
 .button {
     display: inline-block;
-    padding: 12px 18px;
+    padding: 10px 14px;
     background: #4aa3ff;
     color: #000;
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
-    margin-top: 10px;
 }
 
-select {
-    width: 100%;
+/* 旧バージョン折りたたみ */
+details {
+    background: #121522;
     padding: 10px;
-    margin-top: 10px;
-    background: #11141c;
-    color: #eaeaea;
-    border: 1px solid #333;
-    border-radius: 8px;
+    border-radius: 10px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    padding: 8px;
 }
 
 .notice {
@@ -57,7 +73,6 @@ select {
     border-left: 4px solid #ff5555;
     padding: 12px;
     border-radius: 8px;
-    margin-top: 10px;
 }
 </style>
 
@@ -67,22 +82,54 @@ select {
 
 <header>
     <h1>ダウンロード</h1>
-    <p>ATOS放送シュミレーター 配布ページ</p>
+    <p>ATOS放送シュミレーター</p>
 </header>
 
 <section>
 
 <div class="card">
-    <h2>📦 バージョン選択</h2>
+    <h2>📦 バージョン一覧</h2>
 
-    <label>バージョン</label>
-    <select id="versionSelect" onchange="updateDownloadLink()">
-        <option value="1.0.0">Release 1.0.0（最新）</option>
-    </select>
+    <!-- 最新 -->
+    <div class="versionBox">
+        <div>
+            <div class="versionTitle">Release 1.0.0（最新）</div>
+            <small>安定版・推奨</small>
+        </div>
+        <a class="button" href="app/ATOS放送シュミレーター Setup Release 1.0.0.exe.0.0.exe" download>
+            ダウンロード
+        </a>
+    </div>
 
-    <a id="downloadBtn" class="button" href="app/ATOS放送シュミレーター Setup 1.0.0.exe" download>
-        ⬇ ダウンロード
-    </a>
+    <!-- 旧バージョン -->
+    <details>
+        <summary>📁 旧バージョンを表示</summary>
+
+        <div class="versionBox">
+            <div>
+                <div class="versionTitle">Beta 1.0.0</div>
+                <small>リリーステスト版</small>
+            </div>
+            <a class="button" href="app/ATOS放送シュミレーター Beta 1.0.0.exe" download>
+                ダウンロード
+            </a>
+        </div>
+
+        <!-- 今後ここに追加 -->
+        <!--
+        <div class="versionBox">
+            <div>
+                <div class="versionTitle">Alpha 0.9.0</div>
+                <small>開発版</small>
+            </div>
+            <a class="button" href="app/xxx.exe" download>
+                ダウンロード
+            </a>
+        </div>
+        -->
+
+    </details>
+
 </div>
 
 <div class="card">
@@ -92,28 +139,11 @@ select {
         ・appフォルダの指定は不要です（そのまま実行可能）<br>
         ・audio_partsフォルダは初回起動時に自動生成されます<br>
         ・音声パーツはユーザー自身で用意してください（今後配布予定）<br>
+        ・古いバージョンは非推奨の場合があります
     </div>
 </div>
 
-<div class="card">
-    <h2>💻 動作環境</h2>
-    <ul>
-        <li>Windows 10 / 11</li>
-        <li>Electronベースアプリ</li>
-        <li>ローカル実行型（ネット不要）</li>
-    </ul>
-</div>
-
 </section>
-
-<script>
-function updateDownloadLink() {
-    const v = document.getElementById("versionSelect").value;
-    const btn = document.getElementById("downloadBtn");
-
-    btn.href = `app/ATOS放送シュミレーター Setup {v}.exe`;
-}
-</script>
 
 </body>
 </html>
