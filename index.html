@@ -1,191 +1,144 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>ATOS放送シュミレーター</title>
-
-<style>
-body {
-    margin: 0;
-    font-family: "Segoe UI", sans-serif;
-    background: #0f0f14;
-    color: #eaeaea;
-}
-
-/* ヘッダー */
-header {
-    padding: 70px 20px;
-    text-align: center;
-    background: linear-gradient(90deg, #1a1d25, #2b2f3a);
-}
-
-header h1 {
-    font-size: 40px;
-    margin: 0;
-}
-
-header p {
-    opacity: 0.7;
-    margin-top: 10px;
-}
-
-/* ナビ */
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    padding: 15px;
-    background: #151822;
-    position: sticky;
-    top: 0;
-}
-
-nav a {
-    text-decoration: none;
-    color: #eaeaea;
-    padding: 10px 14px;
-    background: #1b1f2a;
-    border-radius: 8px;
-    transition: 0.2s;
-}
-
-nav a:hover {
-    background: #4aa3ff;
-    color: #000;
-}
-
-/* レイアウト */
-section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 30px;
-}
-
-.card {
-    background: #1b1f2a;
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-}
-
-/* ボタン */
-.button {
-    display: inline-block;
-    padding: 12px 16px;
-    background: #4aa3ff;
-    color: #000;
-    border-radius: 8px;
-    text-decoration: none;
-    margin-right: 10px;
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-/* ステータス */
-.status {
-    display: inline-block;
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-size: 12px;
-    background: #2ecc71;
-    color: #000;
-}
-
-/* グリッド */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 15px;
-}
-
-/* フッター */
-footer {
-    text-align: center;
-    padding: 30px;
-    opacity: 0.5;
-    font-size: 12px;
-}
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATOS放送シュミレーター Official Page</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-    <h1>ATOS放送シュミレーター</h1>
-    <p>鉄道放送をパーツで構成するデスクトップアプリ</p>
-    <span class="status">Release 1.0.0</span>
-</header>
+    <!-- 背景演出 -->
+    <div id="bgGrid"></div>
+    <div id="bgGlow"></div>
 
-<nav>
-    <a href="index.html">ホーム</a>
-    <a href="download.html">ダウンロード</a>
-    <a href="howto.html">使い方</a>
-    <a href="releasenotes.html">更新履歴</a>
-    <a href="parts.html">パーツ（予定）</a>
-</nav>
-
-<section>
-
-<div class="card">
-    <h2>🚉 概要</h2>
-    <p>
-        ATOS放送シュミレーターは、駅放送を「音声パーツ」として分解し、
-        自由に組み立ててリアルな自動放送を作成できるツールです。
-    </p>
-</div>
-
-<div class="card">
-    <h2>⚙ 主な機能</h2>
-
-    <div class="grid">
-        <div>🎧 パーツ編集</div>
-        <div>🚉 接近放送生成</div>
-        <div>🧩 ドラッグ編集</div>
-        <div>💾 TNQ保存</div>
-        <div>🔊 WAV出力</div>
-        <div>↩ Undo対応</div>
+    <!-- =========================
+         ヘッダー
+    ========================== -->
+    <header id="topHeader">
+        <div id="headerInner">
+            <div id="mainTitle">ATOS放送シュミレーター</div>
+            <div id="subTitle1">ATOS放送を、より自由に、より精密に。</div>
+            <div id="subTitle2">接近放送・発車放送・編集・出力をこの一本に。</div>
+            <div id="subTitle3">阪和線委員会制作 JR放送再現ソフト</div>
+            <div id="versionTag">Release 1.0.1 / 修正パッチ適用版</div>
+        </div>
+    </header>
+    <div id="tickerWrap">
+    <div id="tickerText">
+        ATOS放送シュミレーター Release 1.0.1 公開中　｜　JR東日本型自動放送編集ソフト　｜　Desktop Edition Official Distribution Page
     </div>
 </div>
 
-<div class="card">
-    <h2>📥 ダウンロード</h2>
-    <p>最新版をすぐに利用できます</p>
+    <!-- =========================
+         ソフト紹介
+    ========================== -->
+    <section class="infoSection">
+        <div class="sectionTitle">SOFTWARE INFORMATION</div>
+        <div class="sectionBody">
+            <p>
+                ATOS放送シュミレーターは、JR東日本型ATOS自動放送の音声パーツを自由に組み合わせ、
+                接近放送・発車放送・案内放送などを高精度に再現・編集・出力できる
+                デスクトップ専用放送再現ソフトです。
+            </p>
 
-    <a class="button" href="download.html">ダウンロードページ</a>
-</div>
+            <p>
+                複数パーツのキュー編集、無音秒数挿入、TNQ保存、WAV一括出力、
+                自動ノーマライズ、接近放送自動組成など、
+                実用性を重視した多数の機能を搭載しています。
+            </p>
+        </div>
+    </section>
 
-<div class="card">
-    <h2>📖 ドキュメント</h2>
+    <!-- =========================
+         修正内容
+    ========================== -->
+    <section class="infoSection">
+        <div class="sectionTitle">RELEASE 1.0.1 PATCH NOTES</div>
+        <div class="sectionBody">
+            <ul class="patchList">
+                <li>接近放送自動組成処理の内部不具合を修正</li>
+                <li>組成前キュー全削除チェック機能を修正</li>
+                <li>行先のみ必須判定へ変更</li>
+                <li>再生処理の安定化</li>
+                <li>Undo保存処理の改善</li>
+                <li>内部ID不一致による停止問題を修正</li>
+                <li>各種軽微な動作修正</li>
+            </ul>
+        </div>
+    </section>
+        <!-- =========================
+         スクリーンショット
+    ========================== -->
+    <section class="infoSection">
+        <div class="sectionTitle">SCREEN SHOTS</div>
+        <div class="sectionBody">
 
-    <a class="button" href="howto.html">使い方</a>
-    <a class="button" href="releasenotes.html">更新履歴</a>
-</div>
+            <div id="screenArea">
 
-<div class="card">
-    <h2>📦 今後の拡張</h2>
-    <ul>
-        <li>音声パーツ配布（駅別セット）</li>
-        <li>音声プリセット機能</li>
-        <li>放送テンプレート追加</li>
-        <li>リアルATOS風UI強化</li>
-    </ul>
+                <div class="screenCard">
+                    <img src="images/screen1.png" alt="screen1">
+                    <div class="screenCaption">メイン編集画面</div>
+                </div>
 
-    <a class="button" href="parts.html">パーツページ（準備中）</a>
-</div>
+                <div class="screenCard">
+                    <img src="images/screen2.png" alt="screen3">
+                    <div class="screenCaption">設定画面</div>
+                </div>
 
-<div class="card">
-    <h2>📌 状態</h2>
-    <p>
-        現在は初期リリース段階ですが、今後アップデートで大幅拡張予定です。
-    </p>
-</div>
+            </div>
 
+        </div>
+    </section>
+
+    <!-- =========================
+         ダウンロード
+    ========================== -->
+    <section class="infoSection">
+    <div class="sectionTitle">DOWNLOAD</div>
+    <div class="sectionBody">
+
+        <div style="text-align:center; padding:30px;">
+            <p style="font-size:20px; margin-bottom:25px;">
+                最新版・旧版・ベータ版のダウンロードはこちら
+            </p>
+
+            <a href="download.html" class="downloadBtn" style="font-size:22px; padding:16px 35px;">
+                DOWNLOAD PAGEへ
+            </a>
+        </div>
+
+    </div>
 </section>
 
-<footer>
-ATOS放送シュミレーター ©Made by Hanwa Line Committee
-</footer>
+    <!-- =========================
+         更新履歴
+    ========================== -->
+    <section class="infoSection">
+        <div class="sectionTitle">UPDATE HISTORY</div>
+        <div class="sectionBody">
+            <ul class="patchList">
+                <li>Release 1.0.1 - 修正パッチ公開</li>
+                <li>Release 1.0.0 - Desktop Edition 初版公開</li>
+                <li>Beta 1.0.0 - 内部試験版</li>
+            </ul>
+        </div>
+    </section>
 
+    <!-- =========================
+         開発者
+    ========================== -->
+    <section class="infoSection">
+        <div class="sectionTitle">DEVELOPER</div>
+        <div class="sectionBody">
+            <p>Made by Hanwa Line Committee</p>
+            <p>JR自動放送再現・音声編集ソフト開発プロジェクト</p>
+        </div>
+    </section>
+
+    <footer id="footer">
+        ATOS放送シュミレーター Official Distribution Page
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

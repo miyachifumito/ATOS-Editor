@@ -1,152 +1,105 @@
 <!DOCTYPE html>
 <html lang="ja">
-    <head>
-        <meta charset="UTF-8">
-        <title>ダウンロード - ATOS放送シュミレーター</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATOS放送シュミレーター Download Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        <style>
-body {
-    margin: 0;
-    font-family: sans-serif;
-    background: #0f0f14;
-    color: #eaeaea;
-}
+    <div id="bgGrid"></div>
+    <div id="bgGlow"></div>
 
-header {
-    padding: 40px;
-    text-align: center;
-    background: #1a1d25;
-}
+    <!-- =========================
+         ヘッダー
+    ========================== -->
+    <header id="topHeader">
+        <div id="headerInner">
+            <div id="mainTitle">DOWNLOAD CENTER</div>
+            <div id="subTitle1">ATOS放送シュミレーター 配布ページ</div>
+            <div id="subTitle2">最新版・旧版・試験版をこちらから取得できます</div>
+            <div id="versionTag">Official Distribution</div>
+        </div>
+    </header>
+    <div id="tickerWrap">
+    <div id="tickerText">
+        ATOS放送シュミレーター Release 1.0.1 公開中　｜　JR東日本型自動放送編集ソフト　｜　Desktop Edition Official Distribution Page
+    </div>
+</div>
 
-section {
-    max-width: 800px;
-    margin: auto;
-    padding: 30px;
-}
+    <!-- =========================
+         ダウンロード一覧
+    ========================== -->
+    <section class="infoSection">
+        <div class="sectionTitle">AVAILABLE DOWNLOADS</div>
+        <div class="sectionBody">
 
-.card {
-    background: #1b1f2a;
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-}
+            <div id="downloadWrap">
 
-.versionBox {
-    background: #141824;
-    padding: 15px;
-    border-radius: 10px;
-    margin-bottom: 12px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.versionTitle {
-    font-weight: bold;
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 14px;
-    background: #4aa3ff;
-    color: #000;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* 旧バージョン折りたたみ */
-details {
-    background: #121522;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-summary {
-    cursor: pointer;
-    font-weight: bold;
-    padding: 8px;
-}
-
-.notice {
-    background: #2a1f1f;
-    border-left: 4px solid #ff5555;
-    padding: 12px;
-    border-radius: 8px;
-}
-</style>
-
-    </head>
-
-    <body>
-
-        <header>
-            <h1>ダウンロード</h1>
-            <p>ATOS放送シュミレーター</p>
-        </header>
-
-        <section>
-
-            <div class="card">
-                <h2>📦 バージョン一覧</h2>
-
-                <!-- 最新 -->
-                <div class="versionBox">
-                    <div>
-                        <div class="versionTitle">Release 1.0.0（最新）</div>
-                        <small>安定版・推奨</small>
-                    </div>
-                    <a class="button"
-                        href="app/ATOS放送シュミレーター Setup Release 1.0.0.exe.0.0.exe"
-                        download>
+                <div class="downloadCard">
+                    <div class="downloadTitle">最新リリース版 Release 1.0.1</div>
+                    <div class="downloadSub">修正パッチ適用版 / 現在の推奨版</div>
+                    <div class="downloadInfo">公開日：2026年5月1日</div>
+                    <div class="downloadInfo">内容：接近放送組成不具合修正・内部安定化</div>
+                    <a href="https://github.com/miyachifumito/ATOS-Editor/releases/download/Release-1.0.1/ATOSBroadcastSimulater.Release-1.0.1.exe" class="downloadBtn">
                         ダウンロード
                     </a>
                 </div>
 
-                <!-- 旧バージョン -->
-                <details>
-                    <summary>📁 旧バージョンを表示</summary>
-
-                    <div class="versionBox">
-                        <div>
-                            <div class="versionTitle">Beta 1.0.0</div>
-                            <small>リリーステスト版</small>
-                        </div>
-                        <a class="button"
-                            href="app/ATOS放送シュミレーター Beta 1.0.0.exe" download>
-                            ダウンロード
-                        </a>
-                    </div>
-
-                    <!-- 今後ここに追加 -->
-                    <!--
-        <div class="versionBox">
-            <div>
-                <div class="versionTitle">Alpha 0.9.0</div>
-                <small>開発版</small>
-            </div>
-            <a class="button" href="app/xxx.exe" download>
-                ダウンロード
-            </a>
-        </div>
-        -->
-
-                </details>
-
-            </div>
-
-            <div class="card">
-                <h2>⚠ 注意事項</h2>
-
-                <div class="notice">
-                    ・appフォルダの指定は不要です（そのまま実行可能）<br>
-                    ・audio_partsフォルダは初回起動時に自動生成されます<br>
-                    ・音声パーツはユーザー自身で用意してください（今後配布予定）<br>
-                    ・古いバージョンは非推奨の場合があります
+                <div class="downloadCard">
+                    <div class="downloadTitle">リリース版 Release 1.0.0</div>
+                    <div class="downloadSub">Desktop Edition 初期公開版</div>
+                    <div class="downloadInfo">公開日：2026年4月29日</div>
+                    <div class="downloadInfo">内容：正式版初回リリース</div>
+                    <a href="https://github.com/miyachifumito/ATOS-Editor/releases/download/Release-1.0.0/ATOSBroadcastSimulater.Release-1.0.0.exe" class="downloadBtn">
+                        ダウンロード
+                    </a>
                 </div>
+
+                <div class="downloadCard">
+                    <div class="downloadTitle">ベータ版 Beta 1.0.0</div>
+                    <div class="downloadSub">リリースベータ試験版</div>
+                    <div class="downloadInfo">公開日：2026年4月28日</div>
+                    <div class="downloadInfo">内容：内部試験公開版</div>
+                    <a href="https://github.com/miyachifumito/ATOS-Editor/releases/download/Beta-1.0.0/ATOSBroadcastSimulator.Beta-1.0.0.exe" class="downloadBtn">
+                        ダウンロード
+                    </a>
+                </div>
+
             </div>
 
-        </section>
+        </div>
+    </section>
 
-    </body>
+    <!-- =========================
+         注意事項
+    ========================== -->
+    <section class="infoSection">
+        <div class="sectionTitle">NOTICE</div>
+        <div class="sectionBody">
+            <ul class="patchList">
+                <li>Windows専用ソフトです</li>
+                <li>初回起動時にセキュリティ警告が表示される場合があります</li>
+                <li>最新版 Release 1.0.1 の使用を推奨します</li>
+                <li>旧版・ベータ版の使用は自己責任でお願いします</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- =========================
+         戻る
+    ========================== -->
+    <section class="infoSection">
+        <div class="sectionBody" style="text-align:center;">
+            <a href="index.html" class="downloadBtn">TOP PAGEへ戻る</a>
+        </div>
+    </section>
+
+    <footer id="footer">
+        ATOS放送シュミレーター Official Distribution Page
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
