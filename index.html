@@ -1,144 +1,150 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATOS放送シュミレーター Official Page</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ATOS放送シュミレーター Official Page</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
 
-    <!-- 背景演出 -->
-    <div id="bgGrid"></div>
-    <div id="bgGlow"></div>
+        <!-- 背景演出 -->
+        <div id="bgGrid"></div>
+        <div id="bgGlow"></div>
 
-    <!-- =========================
+        <!-- =========================
          ヘッダー
     ========================== -->
-    <header id="topHeader">
-        <div id="headerInner">
-            <div id="mainTitle">ATOS放送シュミレーター</div>
-            <div id="subTitle1">ATOS放送を、より自由に、より精密に。</div>
-            <div id="subTitle2">接近放送・発車放送・編集・出力をこの一本に。</div>
-            <div id="subTitle3">阪和線委員会制作 JR放送再現ソフト</div>
-            <div id="versionTag">Release 1.0.1 / 修正パッチ適用版</div>
+        <header id="topHeader">
+            <div id="headerInner">
+                <div id="mainTitle">ATOS放送シュミレーター</div>
+                <div id="subTitle1">ATOS放送を、より自由に、より精密に。</div>
+                <div id="subTitle2">接近放送・発車放送・編集・出力をこの一本に。</div>
+                <div id="subTitle3">阪和線委員会制作 JR放送再現ソフト</div>
+                <div id="versionTag">Release 1.1.0 / 新機能</div>
+            </div>
+        </header>
+        <div id="tickerWrap">
+            <div id="tickerText">
+                ATOS放送シュミレーター Release 1.1.0 公開中 ｜ JR東日本型自動放送編集ソフト ｜ Desktop
+                Edition Official Distribution Page
+            </div>
         </div>
-    </header>
-    <div id="tickerWrap">
-    <div id="tickerText">
-        ATOS放送シュミレーター Release 1.0.1 公開中　｜　JR東日本型自動放送編集ソフト　｜　Desktop Edition Official Distribution Page
-    </div>
-</div>
 
-    <!-- =========================
+        <!-- =========================
          ソフト紹介
     ========================== -->
-    <section class="infoSection">
-        <div class="sectionTitle">SOFTWARE INFORMATION</div>
-        <div class="sectionBody">
-            <p>
-                ATOS放送シュミレーターは、JR東日本型ATOS自動放送の音声パーツを自由に組み合わせ、
-                接近放送・発車放送・案内放送などを高精度に再現・編集・出力できる
-                デスクトップ専用放送再現ソフトです。
-            </p>
+        <section class="infoSection">
+            <div class="sectionTitle">SOFTWARE INFORMATION</div>
+            <div class="sectionBody">
+                <p>
+                    ATOS放送シュミレーターは、JR東日本型ATOS自動放送の音声パーツを自由に組み合わせ、
+                    接近放送・発車放送・案内放送などを高精度に再現・編集・出力できる
+                    デスクトップ専用放送再現ソフトです。
+                </p>
 
-            <p>
-                複数パーツのキュー編集、無音秒数挿入、TNQ保存、WAV一括出力、
-                自動ノーマライズ、接近放送自動組成など、
-                実用性を重視した多数の機能を搭載しています。
-            </p>
-        </div>
-    </section>
+                <p>
+                    複数パーツのキュー編集、無音秒数挿入、TNQ保存、WAV一括出力、
+                    自動ノーマライズ、接近放送自動組成など、
+                    実用性を重視した多数の機能を搭載しています。
+                </p>
+            </div>
+        </section>
 
-    <!-- =========================
+        <!-- =========================
          修正内容
     ========================== -->
-    <section class="infoSection">
-        <div class="sectionTitle">RELEASE 1.0.1 PATCH NOTES</div>
-        <div class="sectionBody">
-            <ul class="patchList">
-                <li>接近放送自動組成処理の内部不具合を修正</li>
-                <li>組成前キュー全削除チェック機能を修正</li>
-                <li>行先のみ必須判定へ変更</li>
-                <li>再生処理の安定化</li>
-                <li>Undo保存処理の改善</li>
-                <li>内部ID不一致による停止問題を修正</li>
-                <li>各種軽微な動作修正</li>
-            </ul>
-        </div>
-    </section>
+        <section class="infoSection">
+            <div class="sectionTitle">RELEASE 1.1.0 PATCH NOTES</div>
+            <div class="sectionBody">
+                <ul class="patchList">
+                    <li>放送生成画面を追加</li>
+                    <li>接近放送以外の放送関連のタブを追加</li>
+                    <li>戸閉放送生成を追加</li>
+                    <li>生成文章プレビュー機能</li>
+                    <li>メイン画面の微調整</li>
+                    <li>一部機能の修正</li>
+                </ul>
+            </div>
+        </section>
         <!-- =========================
          スクリーンショット
     ========================== -->
-    <section class="infoSection">
-        <div class="sectionTitle">SCREEN SHOTS</div>
-        <div class="sectionBody">
+        <section class="infoSection">
+            <div class="sectionTitle">SCREEN SHOTS</div>
+            <div class="sectionBody">
 
-            <div id="screenArea">
+                <div id="screenArea">
 
-                <div class="screenCard">
-                    <img src="images/screen1.png" alt="screen1">
-                    <div class="screenCaption">メイン編集画面</div>
-                </div>
+                    <div class="screenCard">
+                        <img src="images/screen1.png" alt="screen1">
+                        <div class="screenCaption">メイン編集画面</div>
+                    </div>
 
-                <div class="screenCard">
-                    <img src="images/screen2.png" alt="screen3">
-                    <div class="screenCaption">設定画面</div>
+                    <div class="screenCard">
+                        <img src="images/screen2.png" alt="screen3">
+                        <div class="screenCaption">設定画面</div>
+                    </div>
+                    <div class="screenCard">
+                        <img src="images/screen3.png" alt="screen3">
+                        <div class="screenCaption">放送生成画面</div>
+                    </div>
+
                 </div>
 
             </div>
+        </section>
 
-        </div>
-    </section>
-
-    <!-- =========================
+        <!-- =========================
          ダウンロード
     ========================== -->
-    <section class="infoSection">
-    <div class="sectionTitle">DOWNLOAD</div>
-    <div class="sectionBody">
+        <section class="infoSection">
+            <div class="sectionTitle">DOWNLOAD</div>
+            <div class="sectionBody">
 
-        <div style="text-align:center; padding:30px;">
-            <p style="font-size:20px; margin-bottom:25px;">
-                最新版・旧版・ベータ版のダウンロードはこちら
-            </p>
+                <div style="text-align:center; padding:30px;">
+                    <p style="font-size:20px; margin-bottom:25px;">
+                        最新版・旧版・ベータ版のダウンロードはこちら
+                    </p>
 
-            <a href="download.html" class="downloadBtn" style="font-size:22px; padding:16px 35px;">
-                DOWNLOAD PAGEへ
-            </a>
-        </div>
+                    <a href="download.html" class="downloadBtn"
+                        style="font-size:22px; padding:16px 35px;">
+                        DOWNLOAD PAGEへ
+                    </a>
+                </div>
 
-    </div>
-</section>
+            </div>
+        </section>
 
-    <!-- =========================
+        <!-- =========================
          更新履歴
     ========================== -->
-    <section class="infoSection">
-        <div class="sectionTitle">UPDATE HISTORY</div>
-        <div class="sectionBody">
-            <ul class="patchList">
-                <li>Release 1.0.1 - 修正パッチ公開</li>
-                <li>Release 1.0.0 - Desktop Edition 初版公開</li>
-                <li>Beta 1.0.0 - 内部試験版</li>
-            </ul>
-        </div>
-    </section>
+        <section class="infoSection">
+            <div class="sectionTitle">UPDATE HISTORY</div>
+            <div class="sectionBody">
+                <ul class="patchList">
+                    <li>Release 1.1.0 - 新機能公開</li>
+                    <li>Release 1.0.1 - 修正パッチ公開</li>
+                    <li>Release 1.0.0 - Desktop Edition 初版公開</li>
+                    <li>Beta 1.0.0 - 内部試験版</li>
+                </ul>
+            </div>
+        </section>
 
-    <!-- =========================
+        <!-- =========================
          開発者
     ========================== -->
-    <section class="infoSection">
-        <div class="sectionTitle">DEVELOPER</div>
-        <div class="sectionBody">
-            <p>Made by Hanwa Line Committee</p>
-            <p>JR自動放送再現・音声編集ソフト開発プロジェクト</p>
-        </div>
-    </section>
+        <section class="infoSection">
+            <div class="sectionTitle">DEVELOPER</div>
+            <div class="sectionBody">
+                <p>Made by Hanwa Line Committee</p>
+                <p>JR自動放送再現・音声編集ソフト開発プロジェクト</p>
+            </div>
+        </section>
 
-    <footer id="footer">
-        ATOS放送シュミレーター Official Distribution Page
-    </footer>
-    <script src="script.js"></script>
-</body>
+        <footer id="footer">
+            ATOS放送シュミレーター Official Distribution Page
+        </footer>
+        <script src="script.js"></script>
+    </body>
 </html>
